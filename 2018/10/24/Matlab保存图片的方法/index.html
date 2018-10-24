@@ -3,15 +3,20 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Archives | Jiawei Liu</title>
+  <title>Matlab保存图片的方法 | Jiawei Liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jiawei Liu">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="在用Matlab编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替Matlab自带的画图软件直接生成自己要的图片。利用下面的代码：1234567function liujw_save_figure( str_name )  set(gcf,&apos;PaperPositionMode&apos;,&apos;auto&apos;)  mkdir([&apos;fig_res/&apos;,str_na">
+<meta name="keywords" content="Matlab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab保存图片的方法">
+<meta property="og:url" content="http://yoursite.com/2018/10/24/Matlab保存图片的方法/index.html">
 <meta property="og:site_name" content="Jiawei Liu">
+<meta property="og:description" content="在用Matlab编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替Matlab自带的画图软件直接生成自己要的图片。利用下面的代码：1234567function liujw_save_figure( str_name )  set(gcf,&apos;PaperPositionMode&apos;,&apos;auto&apos;)  mkdir([&apos;fig_res/&apos;,str_na">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-24T14:51:17.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jiawei Liu">
+<meta name="twitter:title" content="Matlab保存图片的方法">
+<meta name="twitter:description" content="在用Matlab编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替Matlab自带的画图软件直接生成自己要的图片。利用下面的代码：1234567function liujw_save_figure( str_name )  set(gcf,&apos;PaperPositionMode&apos;,&apos;auto&apos;)  mkdir([&apos;fig_res/&apos;,str_na">
   
   
     <link rel="icon" href="/favicon.png">
@@ -134,39 +139,45 @@
   
 </aside>
         
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/10/24/Matlab保存图片的方法/" class="archive-article-date">
-  <time datetime="2018-10-24T14:02:08.000Z" itemprop="datePublished">10月 24</time>
+        <section id="main"><article id="post-Matlab保存图片的方法" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/24/Matlab保存图片的方法/" class="article-date">
+  <time datetime="2018-10-24T14:02:08.000Z" itemprop="datePublished">2018-10-24</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/24/Matlab保存图片的方法/">Matlab保存图片的方法</a>
+    <h1 class="article-title" itemprop="name">
+      Matlab保存图片的方法
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在用Matlab编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替Matlab自带的画图软件直接生成自己要的图片。利用下面的代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> liujw_save_figure( str_name )</span><br><span class="line">  <span class="built_in">set</span>(gcf,<span class="string">'PaperPositionMode'</span>,<span class="string">'auto'</span>)</span><br><span class="line">  mkdir([<span class="string">'fig_res/'</span>,str_name]);</span><br><span class="line">  saveas(gcf,[<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.fig'</span>],<span class="string">'fig'</span>);</span><br><span class="line">  saveas(gcf,[<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.eps'</span>],<span class="string">'epsc'</span>);</span><br><span class="line">  <span class="built_in">print</span>([<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.tif'</span>],<span class="string">'-dtiff'</span>,<span class="string">'-r300'</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+<p>上述代码会在工作目录下自动生成包含三个图片格式的图片并分别存放在各自子文件夹里。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/24/Matlab保存图片的方法/" data-id="cjnn8vrv00003l4bvsnjt1xel" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Matlab/">Matlab</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
       </div>
