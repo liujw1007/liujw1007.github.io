@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="在用Matlab编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替Matlab自带的画图软件直接生成自己要的图片。利用下面的代码：1234567function liujw_save_figure( str_name )  set(gcf,&apos;PaperPositionMode&apos;,&apos;auto&apos;)  mkdir([&apos;fig_res/&apos;,str_na">
+  <meta name="description" content="一种高效的图片保存方法">
 <meta name="keywords" content="Matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab保存图片的方法">
 <meta property="og:url" content="https://liujw1007.github.io/2018/10/24/Matlab保存图片的方法/index.html">
 <meta property="og:site_name" content="子布鱼">
-<meta property="og:description" content="在用Matlab编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替Matlab自带的画图软件直接生成自己要的图片。利用下面的代码：1234567function liujw_save_figure( str_name )  set(gcf,&apos;PaperPositionMode&apos;,&apos;auto&apos;)  mkdir([&apos;fig_res/&apos;,str_na">
+<meta property="og:description" content="一种高效的图片保存方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-12T06:32:16.021Z">
+<meta property="og:updated_time" content="2019-06-12T15:08:16.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matlab保存图片的方法">
-<meta name="twitter:description" content="在用Matlab编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替Matlab自带的画图软件直接生成自己要的图片。利用下面的代码：1234567function liujw_save_figure( str_name )  set(gcf,&apos;PaperPositionMode&apos;,&apos;auto&apos;)  mkdir([&apos;fig_res/&apos;,str_na">
+<meta name="twitter:description" content="一种高效的图片保存方法">
 
 
 
@@ -354,7 +354,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-12 14:32:16" itemprop="dateModified" datetime="2019-06-12T14:32:16+08:00">2019-06-12</time>
+                <time title="修改时间：2019-06-12 23:08:16" itemprop="dateModified" datetime="2019-06-12T23:08:16+08:00">2019-06-12</time>
               
             
           </span>
@@ -388,7 +388,9 @@
       
 
       
-        <p>在用<code>Matlab</code>编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替<code>Matlab</code>自带的画图软件直接生成自己要的图片。利用下面的代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> liujw_save_figure( str_name )</span><br><span class="line">  <span class="built_in">set</span>(gcf,<span class="string">'PaperPositionMode'</span>,<span class="string">'auto'</span>)</span><br><span class="line">  mkdir([<span class="string">'fig_res/'</span>,str_name]);</span><br><span class="line">  saveas(gcf,[<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.fig'</span>],<span class="string">'fig'</span>);</span><br><span class="line">  saveas(gcf,[<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.eps'</span>],<span class="string">'epsc'</span>);</span><br><span class="line">  <span class="built_in">print</span>([<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.tif'</span>],<span class="string">'-dtiff'</span>,<span class="string">'-r300'</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+        <blockquote>
+<p><center><strong>一种高效的图片保存方法</strong></center><br><a id="more"></a><br>在用<code>Matlab</code>编程的时候，通常会存在保存图片不符合要求的情况。比如分辨率问题，所见不是所得。事实上，用代码完全可以代替<code>Matlab</code>自带的画图软件直接生成自己要的图片。利用下面的代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> liujw_save_figure( str_name )</span><br><span class="line">  <span class="built_in">set</span>(gcf,<span class="string">'PaperPositionMode'</span>,<span class="string">'auto'</span>)</span><br><span class="line">  mkdir([<span class="string">'fig_res/'</span>,str_name]);</span><br><span class="line">  saveas(gcf,[<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.fig'</span>],<span class="string">'fig'</span>);</span><br><span class="line">  saveas(gcf,[<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.eps'</span>],<span class="string">'epsc'</span>);</span><br><span class="line">  <span class="built_in">print</span>([<span class="string">'fig_res/'</span>,str_name,<span class="string">'/'</span>,str_name,<span class="string">'.tif'</span>],<span class="string">'-dtiff'</span>,<span class="string">'-r300'</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 <p>上述代码会在工作目录下自动生成包含三个图片格式的图片并分别存放在各自子文件夹里。</p>
 
       
