@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="子布鱼">
 <meta property="og:description" content="利用Matlab保存数据为TXT文件">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-12T15:10:19.979Z">
+<meta property="og:updated_time" content="2019-06-13T09:40:28.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matlab-store date in txt for plotting in Origin">
 <meta name="twitter:description" content="利用Matlab保存数据为TXT文件">
@@ -354,7 +354,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-12 23:10:19" itemprop="dateModified" datetime="2019-06-12T23:10:19+08:00">2019-06-12</time>
+                <time title="修改时间：2019-06-13 17:40:28" itemprop="dateModified" datetime="2019-06-13T17:40:28+08:00">2019-06-13</time>
               
             
           </span>
@@ -389,7 +389,7 @@
 
       
         <blockquote>
-<p><center><strong>利用Matlab保存数据为TXT文件</strong></center><br><a id="more"></a><br>When we wrote code in Matlab, we perferred to plot figures directly. However, the figures produced by such way are disposable and  unable to correct. So I`d like to store the data in txt and then handle them by Origin (a kind of powerful draw tool). What matters is that the data storage format is different in Origin, where we should ensure that the position of each point $(x,y)$ has been contained in txt. Use the code below:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> liujw_save_txt( x,y,z, strname )</span><br><span class="line">    xmax=size(x);</span><br><span class="line">    ymax=size(y);</span><br><span class="line">    m=1;</span><br><span class="line">    <span class="keyword">for</span> i=1:1:xmax(2)</span><br><span class="line">        <span class="keyword">for</span> j=1:1:ymax(2)</span><br><span class="line">            ztemp(m)=z(i,j);</span><br><span class="line">            xtemp(m)=x(i);</span><br><span class="line">            ytemp(m)=y(j);</span><br><span class="line">            m=m+1;</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">    data=[xtemp<span class="string">' ytemp'</span> ztemp<span class="string">'];</span></span><br><span class="line"><span class="string">    mkdir('</span>txt_res/<span class="string">');</span></span><br><span class="line"><span class="string">    save(['</span>txt_res/<span class="string">',strname,'</span>.txt<span class="string">'], '</span>data<span class="string">','</span>-ascii<span class="string">')</span></span><br><span class="line"><span class="string">end</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>利用Matlab保存数据为TXT文件</strong><br><a id="more"></a><br>When we wrote code in Matlab, we perferred to plot figures directly. However, the figures produced by such way are disposable and  unable to correct. So I`d like to store the data in txt and then handle them by Origin (a kind of powerful draw tool). What matters is that the data storage format is different in Origin, where we should ensure that the position of each point $(x,y)$ has been contained in txt. Use the code below:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> liujw_save_txt( x,y,z, strname )</span><br><span class="line">    xmax=size(x);</span><br><span class="line">    ymax=size(y);</span><br><span class="line">    m=1;</span><br><span class="line">    <span class="keyword">for</span> i=1:1:xmax(2)</span><br><span class="line">        <span class="keyword">for</span> j=1:1:ymax(2)</span><br><span class="line">            ztemp(m)=z(i,j);</span><br><span class="line">            xtemp(m)=x(i);</span><br><span class="line">            ytemp(m)=y(j);</span><br><span class="line">            m=m+1;</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">    data=[xtemp<span class="string">' ytemp'</span> ztemp<span class="string">'];</span></span><br><span class="line"><span class="string">    mkdir('</span>txt_res/<span class="string">');</span></span><br><span class="line"><span class="string">    save(['</span>txt_res/<span class="string">',strname,'</span>.txt<span class="string">'], '</span>data<span class="string">','</span>-ascii<span class="string">')</span></span><br><span class="line"><span class="string">end</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <p>The above code will creat a new folder containing the txt file we need under the current folder directly。</p>
 
@@ -505,7 +505,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -659,6 +659,12 @@
 
 
 
+
+  
+    
+    
+  
+  <script color="0,0,200" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
