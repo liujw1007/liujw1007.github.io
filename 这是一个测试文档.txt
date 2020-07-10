@@ -1,7 +1,3 @@
-hello
-第二次
-第三次
-
 用法：
 git pull origin repo %如果远程仓库有改动
 git add .
